@@ -20,7 +20,7 @@
     <header></header>
     <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
         <div class="container">
-            <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
+            <!-- <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
                 <div class="carousel-inner">
                     <div class="carousel-item active"></div>
                     <div class="carousel-item"><img class="w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
@@ -32,15 +32,22 @@
                     <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
                     <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
                 </ol>
-            </div>
+            </div> -->
             <figure class="figure"></figure>
             <picture><img src="assets/img/1641989180041[1].png" style="width: 80px;"></picture><a class="navbar-brand" href="#">SMKN 1 CIBINONG</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Website Sekolah&nbsp;</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">E-Learning Sekolah</a></li>
-                </ul><i class="fa fa-user" style="height: 16px;width: 14.3px;"></i><input class="form-control-sm" type="text" style="width: 100px;height: 20px;" name="usename" placeholder="usename"><i class="fa fa-lock" style="width: 14.3px;"></i><i class="fa fa-user" style="height: 19px;width: 0px;margin: 0px;padding: 0px;min-width: -49px;max-width: -46px;"></i><input class="form-control-sm" type="password" style="width: 110px;height: 20px;" name="password" placeholder="password"><span class="navbar-text actions"> </span>
-            </div><button class="btn btn-primary d-block" type="button" style="width: 60.3px;height: 30px;">Login</button>
+                </ul>
+                <i class="fa fa-user me-2" style="height: 16px;width: 14.3px;"></i>
+                <input class="form-control-sm me-4" type="text" style="width: 100px;height: 20px;" name="username" placeholder="username">
+                <i class="fa fa-lock me-2" style="width: 14.3px;"></i>
+                <input class="form-control-sm" type="password" style="width: 110px;height: 20px;" name="password" placeholder="password">
+                <span class="navbar-text actions"> </span>
+                <input class="btn btn-primary btn-sm d-block ms-3" type="submit" value="Login">
+                <button class="btn btn-sm btn-success d-block ms-3">Register</button>
+            </div>
         </div>
     </nav>
     <section class="features-clean">
