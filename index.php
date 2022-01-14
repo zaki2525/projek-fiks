@@ -46,7 +46,6 @@
                 <input class="form-control-sm" type="password" style="width: 110px;height: 20px;" name="password" placeholder="password">
                 <span class="navbar-text actions"> </span>
                 <input class="btn btn-primary btn-sm d-block ms-3" type="submit" value="Login">
-                <button class="btn btn-sm btn-success d-block ms-3">Register</button>
             </div>
         </div>
     </nav>
