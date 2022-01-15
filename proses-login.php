@@ -1,4 +1,4 @@
-//ini buat yang di halaman login
+
 <?php
 include 'config/koneksi.php'; 
 session_start();
@@ -18,7 +18,7 @@ session_start();
  
     $_SESSION['username'] = $username;
     $_SESSION['role'] = "admin";
-    header('location: admin/hal_admin.php');      
+    header('Location: admin/hal_admin.php');      
     } else if($cek['role']=="guru"){
 
     $_SESSION['username'] = $username;
@@ -33,11 +33,11 @@ session_start();
 
  ?>
 
- //ini buat di halaman admin/guru
+
  
- <?php include '../config/koneksi.php'; session_start();
+ <?php include 'config/koneksi.php'; session_start();
 if(!isset($_SESSION['stat_login']) and !isset($_SESSION['username']) and !isset($_SESSION['password'])){
-	die("anda belum login silahkan login terlebih dahulu silahkan klik <a href='../index.php'>DI SINI</a> untuk login");
+	#die("anda belum login silahkan login terlebih dahulu silahkan klik <a href='../index.php'>DI SINI</a> untuk login");
 } else {
 	echo "<p>login berhasil, selamat datang ".$_SESSION['username']."</p><br>";
 	echo "<a href='../logout.php'><button type='submit' name='logout'>logout</button></a></td><br>";

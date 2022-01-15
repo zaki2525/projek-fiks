@@ -1,3 +1,4 @@
+<?php include 'config/koneksi.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,13 +41,13 @@
                     <li class="nav-item"><a class="nav-link active" href="#">Website Sekolah&nbsp;</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">E-Learning Sekolah</a></li>
                 </ul>
-                <form action="" class="d-flex">
+                <form action="proses-login.php" class="d-flex" method="POST">
                     <i class="fa fa-user me-2 mt-2"></i>
                     <input class="form-control-sm me-4" type="text" style="width: 100px;height: 20px;" name="username" placeholder="username">
                     <i class="fa fa-lock me-2 mt-2"></i>  
                     <input class="form-control-sm" type="password" style="width: 110px;height: 20px;" name="password" placeholder="password">
                     <span class="navbar-text actions"> </span>
-                    <input class="btn btn-primary btn-sm d-block ms-3" type="submit" value="Login">
+                    <input class="btn btn-primary btn-sm d-block ms-3" type="submit" name="login" value="Login">
                 </form>
             </div>
         </div>
