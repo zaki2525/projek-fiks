@@ -40,12 +40,14 @@
                     <li class="nav-item"><a class="nav-link active" href="#">Website Sekolah&nbsp;</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">E-Learning Sekolah</a></li>
                 </ul>
-                <i class="fa fa-user me-2" style="height: 16px;width: 14.3px;"></i>
-                <input class="form-control-sm me-4" type="text" style="width: 100px;height: 20px;" name="username" placeholder="username">
-                <i class="fa fa-lock me-2" style="width: 14.3px;"></i>
-                <input class="form-control-sm" type="password" style="width: 110px;height: 20px;" name="password" placeholder="password">
-                <span class="navbar-text actions"> </span>
-                <input class="btn btn-primary btn-sm d-block ms-3" type="submit" value="Login">
+                <form action="" class="d-flex">
+                    <i class="fa fa-user me-2 mt-2"></i>
+                    <input class="form-control-sm me-4" type="text" style="width: 100px;height: 20px;" name="username" placeholder="username">
+                    <i class="fa fa-lock me-2 mt-2"></i>  
+                    <input class="form-control-sm" type="password" style="width: 110px;height: 20px;" name="password" placeholder="password">
+                    <span class="navbar-text actions"> </span>
+                    <input class="btn btn-primary btn-sm d-block ms-3" type="submit" value="Login">
+                </form>
             </div>
         </div>
     </nav>
