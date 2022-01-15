@@ -32,19 +32,3 @@ session_start();
 }
 
  ?>
-
-
- 
- <?php include 'config/koneksi.php'; session_start();
-if(!isset($_SESSION['stat_login']) and !isset($_SESSION['username']) and !isset($_SESSION['password'])){
-	#die("anda belum login silahkan login terlebih dahulu silahkan klik <a href='../index.php'>DI SINI</a> untuk login");
-} else {
-	echo "<p>login berhasil, selamat datang ".$_SESSION['username']."</p><br>";
-	echo "<a href='../logout.php'><button type='submit' name='logout'>logout</button></a></td><br>";
-}
-
-if($_SESSION['level'] == ""){
-	header('location:../index.php');
-}
-
-?>
