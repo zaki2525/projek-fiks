@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>utama</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -35,17 +36,25 @@
                 </ol>
             </div> -->
             <figure class="figure"></figure>
-            <picture><img src="assets/img/1641989180041[1].png" style="width: 80px;"></picture><a class="navbar-brand" href="#">SMKN 1 CIBINONG</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <picture><img src="assets/img/1641989180041[1].png" style="width: 80px;"></picture><a class="navbar-brand"
+                href="#">SMKN 1 CIBINONG</a><button data-bs-toggle="collapse" class="navbar-toggler"
+                data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span
+                    class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Website Sekolah&nbsp;</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">E-Learning Sekolah</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="http://www.smkn1cibinong.sch.id/"
+                            target="_">Website
+                            Sekolah&nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://learning.smkn1cibinong.sch.id/"
+                            target="_">E-Learning Sekolah</a></li>
                 </ul>
                 <form action="proses-login.php" class="d-flex" method="POST">
                     <i class="fa fa-user me-2 mt-2"></i>
-                    <input class="form-control-sm me-4" type="text" style="width: 100px;height: 20px;" name="username" placeholder="username">
-                    <i class="fa fa-lock me-2 mt-2"></i>  
-                    <input class="form-control-sm" type="password" style="width: 110px;height: 20px;" name="password" placeholder="password">
+                    <input class="form-control-sm me-4" type="text" style="width: 100px;height: 20px;" name="username"
+                        placeholder="username">
+                    <i class="fa fa-lock me-2 mt-2"></i>
+                    <input class="form-control-sm" type="password" style="width: 110px;height: 20px;" name="password"
+                        placeholder="password">
                     <span class="navbar-text actions"> </span>
                     <input class="btn btn-primary btn-sm d-block ms-3" type="submit" name="login" value="Login">
                 </form>
@@ -82,7 +91,13 @@
             </div>
         </div>
         <footer class="footer-basic">
-            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <div class="social">
+                <a href="https://www.instagram.com/smkn1cbn_official/" target="_"><i
+                        class="icon ion-social-instagram"></i></a>
+                <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
             <ul class="list-inline">
                 <li class="list-inline-item"></li>
                 <li class="list-inline-item"><a href="#">Services</a></li>
