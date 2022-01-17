@@ -100,7 +100,7 @@ if($_SESSION['role'] != "admin"){
                                                 class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
                                             log</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item"
-                                            href="../index.php"><i
+                                            href="../config/logout.php"><i
                                                 class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
                                 </div>
