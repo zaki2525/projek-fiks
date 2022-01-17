@@ -167,11 +167,14 @@
                                             <td style="text-align: center;"><?php echo $data['kelas'] ?></td>
                                             <td style="text-align: center;">
                                                 <a href="editSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
-                                                    <i class="fa me-1 fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
+                                                    <i class="fas me-1 text-white fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
                                                 </a>
                                                 <a
                                                     href="../config/hapusSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
-                                                    <i class="fas ms-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
+                                                    <i class="fas ms-1 me-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fas fa-eye btn btn-info btn-sm text-white ms-1 fs-6 fw-bold"></i>
                                                 </a>
                                             </td>
                                         </tr>

@@ -114,27 +114,27 @@ $data = $query->fetch_assoc();
                                 <input type="hidden" name="id" value="<?php echo $data['id']?>">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">NISN</span>
-                                    <input type="text" value="<?= $data['nisn']; ?> "name="nisn" required class="form-control" placeholder="NISN" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" value="<?= $data['nisn']; ?>"name="nisn" required class="form-control" placeholder="NISN" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Nama</span>
-                                    <input type="text" value="<?= $data['nama']; ?> "name="nama" required class="form-control" placeholder="Nama" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" value="<?= $data['nama']; ?>"name="nama" required class="form-control" placeholder="Nama" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">PWPB</span>
-                                    <input type="number" value="<?= $data['pwpb']; ?> "name="nisn" required class="form-control" placeholder="PWPB" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" value="<?= $data['pwpb']; ?>"name="pwpb" required class="form-control" placeholder="PWPB" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">PBO</span>
-                                    <input type="number" value="<?= $data['pbo']; ?> "name="pbo" required class="form-control" placeholder="PBO" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" value="<?= $data['pbo']; ?>"name="pbo" required class="form-control" placeholder="PBO" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">BD</span>
-                                    <input type="number" value="<?= $data['nisn']; ?> "name="bd" required class="form-control" placeholder="BD" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" value="<?= $data['bd']; ?>"name="bd" required class="form-control" placeholder="BD" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">PPL</span>
-                                    <input type="text" value="<?= $data['ppl']; ?> "name="ppl" required class="form-control" placeholder="ppl" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" value="<?= $data['ppl']; ?>"name="ppl" required class="form-control" placeholder="ppl" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <select class="form-select" name="kelas" required aria-label="Default select example">
