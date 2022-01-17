@@ -1,6 +1,6 @@
 <?php 
 
-include '../config/koneksi.php';
+include 'koneksi.php';
 
 if( isset( $_POST['submit']) )
 {
@@ -16,7 +16,7 @@ if( isset( $_POST['submit']) )
     $query = mysqli_query($koneksi, $sql);
 
     if($query) {
-        header('Location: dtguru_admin.php');
+        header('Location: ../admin/dtguru_admin.php');
     } else {
         echo "ERRORRR";
     }

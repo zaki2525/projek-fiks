@@ -1,3 +1,10 @@
+<?php
+include "../config/koneksi.php";
+$id = $_GET['id'];
+$query = mysqli_query($koneksi,"SELECT * FROM tb_guru WHERE id = $id");
+$data = $query->fetch_assoc();
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -80,9 +87,9 @@
                                             class="border rounded-circle img-profile"
                                             src="../assets/img/avatars/avatar4.jpeg"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
-                                            class="dropdown-item" href="profile_guru.php"><i
+                                            class="dropdown-item" href="profile_admin.php"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a
-                                            class="dropdown-item" href="profile_guru.php"><i
+                                            class="dropdown-item" href="profile_admin.php"><i
                                                 class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a
                                             class="dropdown-item" href="#"><i
                                                 class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
@@ -97,86 +104,96 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">Data Siswa</h3>
+                    <h3 class="text-dark mb-4">Data Guru</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
                             <p class="text-primary m-0 fw-bold" style="text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp;
                                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                &nbsp; &nbsp; &nbsp; Tambah Data Siswa dan Nilai Produktif RPL</p>
+                                &nbsp; &nbsp; &nbsp; Edit Data Guru Produktif RPL</p>
                         </div>
                         <div class="card-body">
-                            <form action="../config/simpanNilai_admin.php" method="POST">
+                            <form action="../config/update_guru.php" method="POST">
+                                <input type="hidden" name="id" value="<?php echo $data['id']?>">
                                 <div class="row">
                                     <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">NISN</label></div>
+                                            class="col-form-label">NIP</label></div>
                                     <div class="col offset-lg-0">
-                                        <input class="form-control" type="text" style="width: 174.8px;" name="nisn"
-                                            placeholder="Masukkan NISN" required>
+                                        <input class="form-control" type="text"
+                                            style="width: 174px;text-align: left;height: 37px;margin: 0px;" name="nip"
+                                            value="<?php echo $data['nip']?>">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
                                             class="col-form-label">Nama</label></div>
                                     <div class="col offset-lg-0">
-                                        <input class="form-control" type="text"
-                                            style="width: 174px;text-align: left;height: 37px;margin: 0px;" name="nama"
-                                            placeholder="Masukkan Nama" required>
+                                        <input class="form-control" type="text" style="width: 174.8px;" name="nama"
+                                            value="<?php echo $data['nama']?>">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">PWPB</label></div>
+                                            class="col-form-label">Mapel</label></div>
                                     <div class="col offset-lg-0">
-                                        <input class="form-control" type="number" style="width: 174.8px;" name="pwpb"
-                                            placeholder="Masukkan nilai" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;"><label
-                                            class="col-form-label" style="width: 61px;font-weight: bold;">PBO</label>
-                                    </div>
-                                    <div class="col offset-lg-0">
-                                        <input class="form-control" type="number" style="width: 174.8px;" name="pbo"
-                                            placeholder="Masukkan nilai" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">BD</label></div>
-                                    <div class="col offset-lg-0">
-                                        <input class="form-control" type="number" style="width: 174.8px;" name="bd"
-                                            placeholder="Masukkan nilai" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">PPL</label></div>
-                                    <div class="col offset-lg-0">
-                                        <input class="form-control" type="number" style="width: 174.8px;" name="ppl"
-                                            placeholder="Masukkan nilai" required>
+                                        <select class="form-select" name="mapel" style="width: 174.8px;">
+                                            <optgroup label="Pilih">
+                                                <?php $mpl = $data['mapel']; ?>
+                                                <option value="PWPB"
+                                                    <?php echo ($mpl == 'PWPB') ? "selected": "" ?>>PWPB
+                                                </option>
+                                                <option value="PBO"
+                                                    <?php echo ($mpl == 'PBO') ? "selected": "" ?>>PBO
+                                                </option>
+                                                <option value="BD"
+                                                    <?php echo ($mpl == 'BD') ? "selected": "" ?>>BD
+                                                </option>
+                                                <option value="PPL"
+                                                    <?php echo ($mpl == 'PPL') ? "selected": "" ?>>PPL
+                                                </option>
+                                            </optgroup>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">Kelas</label></div>
+                                            class="col-form-label">Domisili</label></div>
                                     <div class="col offset-lg-0">
-                                        <select class="form-select" name="kelas" style="width: 174.8px;">
-                                                <optgroup label="Pilih">
-                                                    <option value="" disabled selected>Kelas</option>
-                                                    <option value="11 RPL 1">11 RPL 1</option>
-                                                    <option value="11 RPL 2">11 RPL 2</option>
-                                                    <option value="12 RPL 1">12 RPL 1</option>
-                                                    <option value="12 RPL 2">12 RPL 2</option>
-                                                </optgroup>
+                                        <input class="form-control" type="text" style="width: 174.8px;" name="domisili"
+                                            value="<?php echo $data['domisili']?>">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
+                                            class="col-form-label">Usia</label></div>
+                                    <div class="col offset-lg-0">
+                                        <input class="form-control" type="number" style="width: 174.8px;" name="umur"
+                                            value="<?php echo $data['umur']?>">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
+                                            class="col-form-label">Jenis Kelamin</label></div>
+                                    <div class="col offset-lg-0">
+                                        <select class="form-select" name="jk" style="width: 174.8px;">
+                                            <optgroup label="Pilih">
+                                                <?php $jk = $data['jk']; ?>
+                                                <option value="Pria"
+                                                    <?php echo ($jk == 'Pria') ? "selected": "" ?>>Pria
+                                                </option>
+                                                <option value="Wanita"
+                                                    <?php echo ($jk == 'Wanita') ? "selected": "" ?>>Wanita
+                                                </option>
+                                            </optgroup>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 offset-lg-3" style="width: 165.5px;font-weight: bold;">
-                                        <input class="btn btn-primary" type="submit">
+                                        <input class="btn btn-primary" type="submit" value="Edit">
                                     </div>
                                     <div class="col offset-lg-0">
                                         <input class="btn btn-danger" type="reset" style="width: 80.7px;" value="Reset">
+
                                     </div>
                                 </div>
                             </form>

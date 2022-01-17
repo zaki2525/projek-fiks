@@ -101,7 +101,7 @@
                     <div class="card shadow">
                         <div class="card-header py-3">
                             <p class="text-primary m-0 fw-bold"><a class="btn btn-primary" type="submit"
-                                    style="height: 36px;width: 140px;" href="tambahSiswaNilai_admin.php">Tambah
+                                    style="height: 36px;width: 140px;" data-bs-toggle="modal" data-bs-target="#addSiswa">Tambah
                                     Data</a>&nbsp; &nbsp; &nbsp; &nbsp;
                                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                 &nbsp; &nbsp; &nbsp; Informasi Data Siswa RPL</p>
@@ -155,23 +155,21 @@
                                                     height="30" src="../assets/img/avatars/avatar2.jpeg">Yuli Dianah
                                                 S.t&nbsp;</td> -->
                                             <td style="text-align: center;"><?php echo $data['nisn'] ?>&nbsp;</td>
-                                            <td style="text-align: center;"><i
-                                                    class="fa fa-user fs-5 mt-1 me-2"><?php echo $data['nama'] ?></td>
+                                            <td style="text-align: center;">
+                                                <i class="fa fa-user fs-5 mt-1 me-2"></i><?php echo $data['nama'] ?>
+                                            </td>
                                             <td style="text-align: center;"><?php echo $data['pwpb'] ?></td>
                                             <td style="text-align: center;"><?php echo $data['pbo'] ?></td>
                                             <td style="text-align: center;"><?php echo $data['bd'] ?></td>
                                             <td style="text-align: center;"><?php echo $data['ppl'] ?></td>
                                             <td style="text-align: center;"><?php echo $data['kelas'] ?></td>
                                             <td style="text-align: center;">
-                                                <a href="editSiswaNilai_admin.php?id='<?php echo $data['id']?>'"
-                                                    class="btn btn-warning" type="button"
-                                                    style="width: 25px;height: 25px;margin: 0px;padding: 0px;"><i
-                                                        class="fas fa-edit"></i>
-                                                </a><a
-                                                    href="../config/hapusSiswaNilai_admin.php?id='<?php echo $data['id']?>'"
-                                                    class="btn btn-danger" type="button"
-                                                    style="width: 25px;height: 25px;margin: 0px;padding: 0px;"><i
-                                                        class="far fa-trash-alt"></i></a>
+                                                <a href="editSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
+                                                    <i class="fa me-1 fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
+                                                </a>
+                                                <a href="../config/hapusSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
+                                                    <i class="fas ms-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                         <?php
@@ -185,30 +183,81 @@
                                     </tfoot>
                                 </table>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 align-self-center">
-                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">
-                                        Showing 1 to 10 of 27</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <nav
-                                        class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                        <ul class="pagination">
-                                            <li class="page-item disabled"><a class="page-link" href="#"
-                                                    aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span
-                                                        aria-hidden="true">»</span></a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <!-- MODAL POP UP ADD DATA Siswa -->
+            <div class="modal fade" id="addSiswa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addSiswa">Tambah Data Siswa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="../config/simpanNilai_admin.php" method="POST">
+                            <div class="modal-body">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">NISN</span>
+                                    <input type="text" name="nisn" required class="form-control" placeholder="NISN"
+                                        aria-label="NIP" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Nama</span>
+                                    <input type="text" name="nama" required class="form-control" placeholder="Nama"
+                                        aria-label="Nama" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">PWPB</span>
+                                    <input type="number" name="pwpb" required class="form-control" placeholder="PWPB"
+                                        aria-label="Domisili" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">PBO</span>
+                                    <input type="number" name="pbo" required class="form-control" placeholder="PBO"
+                                        aria-label="Domisili" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">BD</span>
+                                    <input type="number" name="bd" required class="form-control" placeholder="BD"
+                                        aria-label="Domisili" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">PPL</span>
+                                    <input type="number" name="ppl" required class="form-control" placeholder="PPL"
+                                        aria-label="Domisili" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <select name="kelas" required class="form-select"
+                                        aria-label="Default select example">
+                                        <option selected disabled selected>Kelas</option>
+                                        <option value="11 RPL 1">11 RPL 1</option>
+                                        <option value="11 RPL 2">11 RPL 2</option>
+                                        <option value="12 RPL 1">12 RPL 1</option>
+                                        <option value="12 RPL 2">12 RPL 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i
+                                        class="fa fa-close"></i></button>
+                                <input type="submit" name="submit" class="btn btn-success text-white f-bold"
+                                    value="simpan">
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © RPL ONE 2022</span></div>

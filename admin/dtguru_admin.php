@@ -133,6 +133,7 @@
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr class="text-center">
+                                            <th>No</th>
                                             <th>NIP</th>
                                             <th>Nama</th>
                                             <th>Mapel</th>
@@ -144,11 +145,13 @@
                                     </thead>
                                     <?php
                                     include '../config/koneksi.php';
+                                    $no=1;
                                     $tampil = mysqli_query($koneksi, "SELECT * FROM tb_guru");
                                     while ( $data = mysqli_fetch_array($tampil) ){
                                     ?>
                                     <tbody>
                                         <tr class="text-center">
+                                            <td><?= $no++; ?></td>
                                             <td><?= $data['nip']; ?></td>
                                             <td>
                                                 <i class="fa fa-user fs-5 mt-1 me-2"></i>
@@ -159,10 +162,12 @@
                                             <td><?= $data['umur']; ?></td>
                                             <td><?= $data['jk']; ?></td>
                                             <td>
-                                                <a href="#"><i
-                                                        class="fa me-1 fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i></a>
-                                                <a href="hapus-guru.php?id=<?php echo $data['id'];?>"><i
-                                                        class="fas ms-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i></a>
+                                                <a href="edit-guru.php?id=<?= $data['id'];?>">
+                                                    <i class="fa me-1 fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
+                                                </a>
+                                                <a href="../config/hapus-guru.php?id=<?php echo $data['id'];?>">
+                                                    <i class="fas ms-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                         <?php } ?>
@@ -192,7 +197,7 @@
                             <h5 class="modal-title" id="addGuru">Tambah Data Guru</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form action="simpan-guru.php" method="POST">
+                        <form action="../config/simpan-guru.php" method="POST">
                             <div class="modal-body">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">NIP</span>
@@ -247,6 +252,7 @@
                     </form>
                 </div>
             </div>
+
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>

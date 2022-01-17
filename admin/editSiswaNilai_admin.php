@@ -38,8 +38,8 @@ $data = $query->fetch_assoc();
                                 class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="profile_admin.php"><i
                                 class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="dtguru_admin.php"><i
-                                class="fas fa-table"></i><span>Data Guru</span></a><a class="nav-link"
+                    <li class="nav-item"><a class="nav-link" href="dtguru_admin.php"><i
+                                class="fas fa-table"></i><span>Data Guru</span></a><a class="nav-link active"
                             href="dtsiswa_nilai_admin.php"><i class="fas fa-table"></i><span>Data Siswa dan
                                 Nilai</span></a></li>
                     <li class="nav-item"></li>
@@ -171,12 +171,6 @@ $data = $query->fetch_assoc();
                                         <select class="form-select" name="kelas" style="width: 174.8px;">
                                             <optgroup label="Pilih">
                                                 <?php $kelas = $data['kelas']; ?>
-                                                <option value="10 RPL 1"
-                                                    <?php echo ($kelas == '10 RPL 1') ? "selected": "" ?>>10 RPL 1
-                                                </option>
-                                                <option value="10 RPL 2"
-                                                    <?php echo ($kelas == '10 RPL 2') ? "selected": "" ?>>10 RPL 2
-                                                </option>
                                                 <option value="11 RPL 1"
                                                     <?php echo ($kelas == '11 RPL 1') ? "selected": "" ?>>11 RPL 1
                                                 </option>
