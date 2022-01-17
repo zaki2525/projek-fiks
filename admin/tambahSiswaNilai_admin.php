@@ -163,6 +163,8 @@
                                         <select class="form-select" name="kelas" style="width: 174.8px;">
                                                 <optgroup label="Pilih">
                                                     <option value="" disabled selected>Kelas</option>
+                                                    <option value="10 RPL 1">10 RPL 1</option>
+                                                    <option value="10 RPL 2">10 RPL 2</option>
                                                     <option value="11 RPL 1">11 RPL 1</option>
                                                     <option value="11 RPL 2">11 RPL 2</option>
                                                     <option value="12 RPL 1">12 RPL 1</option>
