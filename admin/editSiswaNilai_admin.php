@@ -107,69 +107,37 @@ $data = $query->fetch_assoc();
                     <h3 class="text-dark mb-4">Data Siswa</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold" style="text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp;
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                &nbsp; &nbsp; &nbsp; Edit Data Siswa dan Nilai Produktif RPL</p>
+                            <p class="text-primary m-0 fw-bold" style="text-align: center;">Edit Data Siswa dan Nilai Produktif RPL</p>
                         </div>
                         <div class="card-body">
                             <form action="../config/updateNilai_admin.php" method="POST">
                                 <input type="hidden" name="id" value="<?php echo $data['id']?>">
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">NISN</label></div>
-                                    <div class="col offset-lg-0">
-                                        <input class="form-control" type="number" style="width: 174.8px;" name="nisn"
-                                            value="<?php echo $data['nisn']?>">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">NISN</span>
+                                    <input type="text" value="<?= $data['nisn']; ?> "name="nisn" required class="form-control" placeholder="NISN" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">Nama</label></div>
-                                    <div class="col offset-lg-0">
-                                        <input class="form-control" type="text"
-                                            style="width: 174px;text-align: left;height: 37px;margin: 0px;" name="nama"
-                                            value="<?php echo $data['nama']?>">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Nama</span>
+                                    <input type="text" value="<?= $data['nama']; ?> "name="nama" required class="form-control" placeholder="Nama" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">PWPB</label></div>
-                                    <div class="col offset-lg-0">
-                                        <input class="form-control" type="number" style="width: 174.8px;" name="pwpb"
-                                            value="<?php echo $data['pwpb']?>">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">PWPB</span>
+                                    <input type="number" value="<?= $data['pwpb']; ?> "name="nisn" required class="form-control" placeholder="PWPB" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;"><label
-                                            class="col-form-label" style="width: 61px;font-weight: bold;">PBO</label>
-                                    </div>
-                                    <div class="col offset-lg-0">
-                                        <input class="form-control" type="number" style="width: 174.8px;" name="pbo"
-                                            value="<?php echo $data['pbo']?>">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">PBO</span>
+                                    <input type="number" value="<?= $data['pbo']; ?> "name="pbo" required class="form-control" placeholder="PBO" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">BD</label></div>
-                                    <div class="col offset-lg-0">
-                                        <input class="form-control" type="number" style="width: 174.8px;" name="bd"
-                                            value="<?php echo $data['bd']?>">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">BD</span>
+                                    <input type="number" value="<?= $data['nisn']; ?> "name="bd" required class="form-control" placeholder="BD" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">PPL</label></div>
-                                    <div class="col offset-lg-0">
-                                        <input class="form-control" type="number" style="width: 174.8px;" name="ppl"
-                                            value="<?php echo $data['ppl']?>">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">PPL</span>
+                                    <input type="text" value="<?= $data['ppl']; ?> "name="ppl" required class="form-control" placeholder="ppl" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
-                                            class="col-form-label">Kelas</label></div>
-                                    <div class="col offset-lg-0">
-                                        <select class="form-select" name="kelas" style="width: 174.8px;">
-                                            <optgroup label="Pilih">
+                                <div class="input-group mb-3">
+                                    <select class="form-select" name="kelas" required aria-label="Default select example">
                                                 <?php $kelas = $data['kelas']; ?>
                                                 <option value="11 RPL 1"
                                                     <?php echo ($kelas == '11 RPL 1') ? "selected": "" ?>>11 RPL 1
@@ -183,17 +151,12 @@ $data = $query->fetch_assoc();
                                                 <option value="12 RPL 2"
                                                     <?php echo ($kelas == '12 RPL 2') ? "selected": "" ?>>12 RPL 2
                                                 </option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
+                                    </select>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-3 offset-lg-3" style="width: 165.5px;font-weight: bold;">
-                                        <input class="btn btn-primary" type="submit" value="Edit">
-                                    </div>
-                                    <div class="col offset-lg-0">
-                                        <input class="btn btn-danger" type="reset" style="width: 80.7px;" value="Reset">
-
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <input class="btn btn-primary me-2" type="submit" value="Edit">
+                                        <input class="btn btn-danger ms-2" type="reset" value="Reset">
                                     </div>
                                 </div>
                             </form>

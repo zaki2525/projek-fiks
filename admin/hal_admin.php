@@ -74,11 +74,12 @@
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
-                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
-                                            class="d-none d-lg-inline me-2 text-gray-600 small">admin</span><img
-                                            class="border rounded-circle img-profile"
-                                            src="../assets/img/avatars/avatar4.jpeg"></a>
+                            <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                                        href="#">
+                                        <i class="fa fa-user fs-3 me-2"></i>
+                                        <span class="d-none d-lg-inline me-2 text-gray-600 small"></span>
+                                    </a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
                                             class="dropdown-item" href="profile_admin.php"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a
