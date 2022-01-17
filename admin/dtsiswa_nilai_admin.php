@@ -102,7 +102,8 @@
                     <div class="card shadow">
                         <div class="card-header py-3">
                             <p class="text-primary m-0 fw-bold"><a class="btn btn-primary" type="submit"
-                                    style="height: 36px;width: 140px;" data-bs-toggle="modal" data-bs-target="#addSiswa">Tambah
+                                    style="height: 36px;width: 140px;" data-bs-toggle="modal"
+                                    data-bs-target="#addSiswa">Tambah
                                     Data</a>&nbsp; &nbsp; &nbsp; &nbsp;
                                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                 &nbsp; &nbsp; &nbsp; Informasi Data Siswa RPL</p>
@@ -168,7 +169,8 @@
                                                 <a href="editSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
                                                     <i class="fa me-1 fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
                                                 </a>
-                                                <a href="../config/hapusSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
+                                                <a
+                                                    href="../config/hapusSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
                                                     <i class="fas ms-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
                                                 </a>
                                             </td>
@@ -240,6 +242,8 @@
                                     <select name="kelas" required class="form-select"
                                         aria-label="Default select example">
                                         <option selected disabled selected>Kelas</option>
+                                        <option value="11 RPL 1">10 RPL 1</option>
+                                        <option value="11 RPL 1">10 RPL 2</option>
                                         <option value="11 RPL 1">11 RPL 1</option>
                                         <option value="11 RPL 2">11 RPL 2</option>
                                         <option value="12 RPL 1">12 RPL 1</option>

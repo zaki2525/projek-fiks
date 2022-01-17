@@ -139,6 +139,12 @@ $data = $query->fetch_assoc();
                                 <div class="input-group mb-3">
                                     <select class="form-select" name="kelas" required aria-label="Default select example">
                                                 <?php $kelas = $data['kelas']; ?>
+                                                <option value="10 RPL 1"
+                                                    <?php echo ($kelas == '10 RPL 1') ? "selected": "" ?>>10 RPL 1
+                                                </option>
+                                                <option value="10 RPL 2"
+                                                    <?php echo ($kelas == '10 RPL 2') ? "selected": "" ?>>10 RPL 2
+                                                </option>
                                                 <option value="11 RPL 1"
                                                     <?php echo ($kelas == '11 RPL 1') ? "selected": "" ?>>11 RPL 1
                                                 </option>
