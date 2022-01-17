@@ -86,15 +86,16 @@ if($_SESSION['role'] != "admin"){
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
-                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
-                                            class="d-none d-lg-inline me-2 text-gray-600 small">admin</span><img
-                                            class="border rounded-circle img-profile"
-                                            src="../assets/img/avatars/avatar4.jpeg"></a>
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                                        href="#">
+                                        <i class="fa fa-user fs-3 me-2"></i>
+                                        <span class="d-none d-lg-inline me-2 text-gray-600 small"></span>
+                                    </a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
                                             class="dropdown-item" href="profile_admin.php"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a
-                                            class="dropdown-item" href="profile_admin.php"><i
+                                            class="dropdown-item" href="#"><i
                                                 class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a
                                             class="dropdown-item" href="#"><i
                                                 class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
@@ -178,11 +179,14 @@ if($_SESSION['role'] != "admin"){
                                             <td style="text-align: center;"><?php echo $data['kelas'] ?></td>
                                             <td style="text-align: center;">
                                                 <a href="editSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
-                                                    <i class="fa me-1 fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
+                                                    <i class="fas me-1 text-white fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
                                                 </a>
                                                 <a
                                                     href="../config/hapusSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
-                                                    <i class="fas ms-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
+                                                    <i class="fas ms-1 me-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fas fa-eye btn btn-info btn-sm text-white ms-1 fs-6 fw-bold"></i>
                                                 </a>
                                             </td>
                                         </tr>
@@ -253,8 +257,8 @@ if($_SESSION['role'] != "admin"){
                                     <select name="kelas" required class="form-select"
                                         aria-label="Default select example">
                                         <option selected disabled selected>Kelas</option>
-                                        <option value="11 RPL 1">10 RPL 1</option>
-                                        <option value="11 RPL 1">10 RPL 2</option>
+                                        <option value="10 RPL 1">10 RPL 1</option>
+                                        <option value="10 RPL 2">10 RPL 2</option>
                                         <option value="11 RPL 1">11 RPL 1</option>
                                         <option value="11 RPL 2">11 RPL 2</option>
                                         <option value="12 RPL 1">12 RPL 1</option>

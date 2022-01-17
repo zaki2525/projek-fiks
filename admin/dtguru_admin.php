@@ -174,7 +174,7 @@ if($_SESSION['role'] != "admin"){
                                             <td><?= $data['jk']; ?></td>
                                             <td>
                                                 <a href="edit-guru.php?id=<?= $data['id'];?>">
-                                                    <i class="fa me-1 fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
+                                                    <i class="fas text-white me-1 fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
                                                 </a>
                                                 <a href="../config/hapus-guru.php?id=<?php echo $data['id'];?>">
                                                     <i class="fas ms-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
