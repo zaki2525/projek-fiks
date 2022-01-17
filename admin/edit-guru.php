@@ -1,3 +1,15 @@
+<?php include '../config/koneksi.php'; session_start();
+if(!isset($_SESSION['stat_login']) and !isset($_SESSION['username']) and !isset($_SESSION['password'])){
+	#die("anda belum login silahkan login terlebih dahulu silahkan klik <a href='../index.php'>DI SINI</a> untuk login");
+}
+
+if($_SESSION['role'] != "admin"){
+    echo "<script>alert('Anda bukan Admin!!!');</script>";
+    header('location:../index.php');
+}
+
+?>
+
 <?php
 include "../config/koneksi.php";
 $id = $_GET['id'];

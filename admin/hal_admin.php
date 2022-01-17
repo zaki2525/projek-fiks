@@ -1,3 +1,14 @@
+<?php include '../config/koneksi.php'; session_start();
+if(!isset($_SESSION['stat_login']) and !isset($_SESSION['username']) and !isset($_SESSION['password'])){
+	#die("anda belum login silahkan login terlebih dahulu silahkan klik <a href='../index.php'>DI SINI</a> untuk login");
+}
+
+if($_SESSION['role'] != "admin"){
+    echo "<script>alert('Anda bukan Admin!!!');</script>";
+    header('location:../index.php');
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -88,7 +99,7 @@
                                                 class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
                                             log</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item"
-                                            href="../index.php"><i
+                                            href="../config/logout.php"><i
                                                 class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
                                 </div>
