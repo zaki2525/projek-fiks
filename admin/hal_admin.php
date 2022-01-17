@@ -27,20 +27,20 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link active" href="hal_admin.php"><i
+                    <li class="nav-item"><a class="nav-link" href="hal_admin.php"><i
                                 class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="profile_admin.php"><i
                                 class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="dtguru_admin.php"><i
+                    <li class="nav-item"><a class="nav-link active" href="dtguru_admin.php"><i
                                 class="fas fa-table"></i><span>Data Guru</span></a><a class="nav-link"
                             href="dtsiswa_nilai_admin.php"><i class="fas fa-table"></i><span>Data Siswa dan
                                 Nilai</span></a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul>
-                <div class="text-center d-none d-md-inline"><button class="btn btn-warning" type="button"
-                        style="width: 40px;height: 40px;margin: 0px;padding: 0px;"><i
-                            class="fa fa-caret-left"></i></button></div>
+                <div class="text-center d-none d-md-inline"><a class="btn btn-warning" type="button"
+                        style="width: 40px;height: 40px;margin: 0px;padding: 0px;" href="javascript:history.back()"><i
+                            class="fa fa-caret-left"></i></a></div>
             </div>
         </nav>
         <div class="d-flex flex-column" id="content-wrapper">
@@ -87,7 +87,8 @@
                                             class="dropdown-item" href="#"><i
                                                 class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
                                             log</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i
+                                        <div class="dropdown-divider"></div><a class="dropdown-item"
+                                            href="../index.php"><i
                                                 class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
                                 </div>

@@ -38,8 +38,8 @@ $data = $query->fetch_assoc();
                                 class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="profile_guru.php"><i
                                 class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="tambahSiswaNilai_guru.php"><i
-                                class="fas fa-table"></i><span>Data Siswa dan Nilai</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-table"></i><span>Data Siswa dan
+                                Nilai</span></a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul>

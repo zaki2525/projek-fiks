@@ -31,7 +31,7 @@
                                 class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="profile_admin.php"><i
                                 class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="dtguru_admin.php"><i
+                    <li class="nav-item"><a class="nav-link active" href="dtguru_admin.php"><i
                                 class="fas fa-table"></i><span>Data Guru</span></a><a class="nav-link"
                             href="dtsiswa_nilai_admin.php"><i class="fas fa-table"></i><span>Data Siswa dan
                                 Nilai</span></a></li>
@@ -105,7 +105,7 @@
                                 &nbsp; &nbsp; &nbsp; Tambah Data Siswa dan Nilai Produktif RPL</p>
                         </div>
                         <div class="card-body">
-                            <form action="../config/simpanNilai.php" method="POST">
+                            <form action="../config/simpanNilai_admin.php" method="POST">
                                 <div class="row">
                                     <div class="col-lg-3 offset-lg-3" style="width: 69.5px;font-weight: bold;"><label
                                             class="col-form-label">NISN</label></div>

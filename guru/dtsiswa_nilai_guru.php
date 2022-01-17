@@ -153,7 +153,8 @@
                                                     height="30" src="../assets/img/avatars/avatar2.jpeg">Yuli Dianah
                                                 S.t&nbsp;</td> -->
                                             <td style="text-align: center;"><?php echo $data['nisn'] ?>&nbsp;</td>
-                                            <td style="text-align: center;"><?php echo $data['nama'] ?></td>
+                                            <td style="text-align: center;"><i
+                                                    class="fa fa-user fs-5 mt-1 me-2"><?php echo $data['nama'] ?></td>
                                             <td style="text-align: center;"><?php echo $data['pwpb'] ?></td>
                                             <td style="text-align: center;"><?php echo $data['pbo'] ?></td>
                                             <td style="text-align: center;"><?php echo $data['bd'] ?></td>
