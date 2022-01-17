@@ -242,8 +242,8 @@
                                     <select name="kelas" required class="form-select"
                                         aria-label="Default select example">
                                         <option selected disabled selected>Kelas</option>
-                                        <option value="11 RPL 1">10 RPL 1</option>
-                                        <option value="11 RPL 1">10 RPL 2</option>
+                                        <option value="10 RPL 1">10 RPL 1</option>
+                                        <option value="10 RPL 2">10 RPL 2</option>
                                         <option value="11 RPL 1">11 RPL 1</option>
                                         <option value="11 RPL 2">11 RPL 2</option>
                                         <option value="12 RPL 1">12 RPL 1</option>
