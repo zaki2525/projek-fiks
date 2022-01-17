@@ -40,7 +40,7 @@
                 </ul>
                 <div class="text-center d-none d-md-inline"><a class="btn btn-warning" role="button"
                         style="width: 40px;height: 40px;margin: 0px;padding: 0px;" href="hal_admin.php"><i
-                            class="fa fa-caret-left"></i></a></div>
+                            class="fa fa-caret-left mt-2"></i></a></div>
             </div>
         </nav>
         <div class="d-flex flex-column" id="content-wrapper">
@@ -74,11 +74,12 @@
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
-                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
-                                            class="d-none d-lg-inline me-2 text-gray-600 small">Orang</span><img
-                                            class="border rounded-circle img-profile"
-                                            src="../assets/img/avatars/avatar4.jpeg"></a>
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                                        <i class="fa fa-user fs-3 me-2"></i>
+                                        <span class="d-none d-lg-inline me-2 text-gray-600 small"></span>
+                                    </a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
                                             class="dropdown-item" href="profile_admin.php"><i
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a
@@ -99,10 +100,11 @@
                     <h3 class="text-dark mb-4">Data Guru</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold"><button class="btn btn-primary" type="submit"
-                                    style="height: 36px;width: 119.4px;">Tambah Data</button>&nbsp; &nbsp; &nbsp; &nbsp;
+                            <p class="text-primary m-0 fw-bold">
+                                <button class="btn btn-primary" style="height: 36px;width: 119.4px;" data-bs-toggle="modal" data-bs-target="#addGuru">Tambah</button>&nbsp; &nbsp; &nbsp; &nbsp;
                                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                &nbsp; &nbsp; &nbsp; Informasi Data Guru Produktif RPL</p>
+                                &nbsp; &nbsp; &nbsp; Informasi Data Guru Produktif RPL
+                            </p>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -126,35 +128,38 @@
                                 aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
                                     <thead>
-                                        <tr>
-                                            <th style="text-align: center;">NIP</th>
-                                            <th style="text-align: center;">Nama</th>
-                                            <th style="text-align: center;">Mapel</th>
-                                            <th style="text-align: center;">Domisili</th>
-                                            <th style="text-align: center;">Umur</th>
-                                            <th style="text-align: center;">Kelas</th>
-                                            <th style="text-align: center;">JK</th>
-                                            <th style="text-align: center;">Edit</th>
+                                        <tr class="text-center">
+                                            <th>NIP</th>
+                                            <th>Nama</th>
+                                            <th>Mapel</th>
+                                            <th>Domisili</th>
+                                            <th>Umur</th>
+                                            <th>JK</th>
+                                            <th>Edit</th>
                                         </tr>
                                     </thead>
+                                    <?php
+                                    include '../config/koneksi.php';
+                                    $tampil = mysqli_query($koneksi, "SELECT * FROM tb_guru");
+                                    while ( $data = mysqli_fetch_array($tampil) ){
+                                    ?>
                                     <tbody>
-                                        <tr>
-                                            <td style="text-align: center;">123234456&nbsp;</td>
-                                            <td><img class="rounded-circle me-2" width="30" height="30"
-                                                    src="../assets/img/avatars/avatar2.jpeg">Yuli Dianah S.t&nbsp;</td>
-                                            <td style="text-align: center;">PWPB</td>
-                                            <td style="text-align: center;">Kab.Bogor</td>
-                                            <td style="text-align: center;">33</td>
-                                            <td style="text-align: center;">RPL</td>
-                                            <td style="text-align: center;">P</td>
-                                            <td style="text-align: center;"><button class="btn btn-warning"
-                                                    type="button"
-                                                    style="width: 25px;height: 25px;margin: 0px;padding: 0px;"><i
-                                                        class="fas fa-edit"></i></button><button class="btn btn-danger"
-                                                    type="button"
-                                                    style="width: 25px;height: 25px;margin: 0px;padding: 0px;"><i
-                                                        class="far fa-trash-alt"></i></button></td>
+                                        <tr class="text-center">
+                                            <td><?= $data['nip']; ?></td>
+                                            <td>
+                                                <i class="fa fa-user fs-5 mt-1 me-2"></i>
+                                                <?= $data['nama']; ?>
+                                            </td>
+                                            <td><?= $data['mapel']; ?></td>
+                                            <td><?= $data['domisili']; ?></td>
+                                            <td><?= $data['umur']; ?></td>
+                                            <td><?= $data['jk']; ?></td>
+                                            <td>
+                                                <a href="#"><i class="fa me-1 fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i></a>
+                                                <a href="hapus-guru.php?id=<?php echo $data['id'];?>"><i class="fas ms-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i></a>
+                                            </td>
                                         </tr>
+                                        <?php } ?>
                                     </tbody>
                                     <tfoot>
                                         <tr>
@@ -172,6 +177,63 @@
                     <div class="text-center my-auto copyright mt-5"><span>Copyright © RPL ONE 2022</span></div>
                 </div>
             </footer>
+
+            <!-- MODAL POP UP ADD DATA GURU -->
+            <div class="modal fade" id="addGuru" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addGuru">Tambah Data Guru</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    <form action="simpan-guru.php" method="POST">
+                        <div class="modal-body">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">NIP</span>
+                                <input type="text" name="nip" required class="form-control" placeholder="NIP" aria-label="NIP" aria-describedby="basic-addon1">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Nama</span>
+                                <input type="text" name="nama" required class="form-control" placeholder="Nama" aria-label="Nama" aria-describedby="basic-addon1">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <select name="mapel" required class="form-select" aria-label="Default select example">
+                                    <option selected disabled selected>Mata Pelajaran</option>
+                                    <option value="PWPB">PWPB</option>
+                                    <option value="PBO">PBO</option>
+                                    <option value="BD">BD</option>
+                                    <option value="PPL">PPL</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Domisili</span>
+                                <input type="text" name="domisili" required class="form-control" placeholder="Domisili" aria-label="Domisili" aria-describedby="basic-addon1">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Usia</span>
+                                <input type="number" name="umur" required class="form-control" placeholder="Usia" aria-label="Domisili" aria-describedby="basic-addon1">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <select name="jk" required class="form-select" aria-label="Default select example">
+                                    <option selected disabled selected>Jenis Kelamin</option>
+                                    <option value="Pria">Pria</option>
+                                    <option value="Wanita">Wanita</option>
+                                </select>
+                            </div>
+                        </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-close"></i></button>
+                                <input type="submit" name="submit" class="btn btn-success text-white f-bold" value="simpan">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
