@@ -171,6 +171,12 @@ $data = $query->fetch_assoc();
                                         <select class="form-select" name="kelas" style="width: 174.8px;">
                                             <optgroup label="Pilih">
                                                 <?php $kelas = $data['kelas']; ?>
+                                                <option value="10 RPL 1"
+                                                    <?php echo ($kelas == '10 RPL 1') ? "selected": "" ?>>10 RPL 1
+                                                </option>
+                                                <option value="10 RPL 2"
+                                                    <?php echo ($kelas == '10 RPL 2') ? "selected": "" ?>>10 RPL 2
+                                                </option>
                                                 <option value="11 RPL 1"
                                                     <?php echo ($kelas == '11 RPL 1') ? "selected": "" ?>>11 RPL 1
                                                 </option>
