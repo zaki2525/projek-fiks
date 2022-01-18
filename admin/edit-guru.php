@@ -23,7 +23,7 @@ $data = $query->fetch_assoc();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Table - Brand</title>
+    <title>Edit Data Guru Produktif RPL</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -126,51 +126,54 @@ $data = $query->fetch_assoc();
                                 <input type="hidden" name="id" value="<?php echo $data['id']?>">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">NIP</span>
-                                    <input type="text" value="<?= $data['nip']; ?> "name="nip" required class="form-control" placeholder="NIP" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" value="<?= $data['nip']; ?> " name="nip" required
+                                        class="form-control" placeholder="NIP" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Nama</span>
-                                    <input type="text" value="<?= $data['nama']; ?>" name="nama" required class="form-control" placeholder="Nama" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" value="<?= $data['nama']; ?>" name="nama" required
+                                        class="form-control" placeholder="Nama" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <select class="form-select" name="mapel" required aria-label="Default select example">
-                                                <?php $mpl = $data['mapel']; ?>
-                                                <option value="PWPB"
-                                                    <?php echo ($mpl == 'PWPB') ? "selected": "" ?>>PWPB
-                                                </option>
-                                                <option value="PBO"
-                                                    <?php echo ($mpl == 'PBO') ? "selected": "" ?>>PBO
-                                                </option>
-                                                <option value="BD"
-                                                    <?php echo ($mpl == 'BD') ? "selected": "" ?>>BD
-                                                </option>
-                                                <option value="PPL"
-                                                    <?php echo ($mpl == 'PPL') ? "selected": "" ?>>PPL
-                                                </option>
+                                    <select class="form-select" name="mapel" required
+                                        aria-label="Default select example">
+                                        <?php $mpl = $data['mapel']; ?>
+                                        <option value="PWPB" <?php echo ($mpl == 'PWPB') ? "selected": "" ?>>PWPB
+                                        </option>
+                                        <option value="PBO" <?php echo ($mpl == 'PBO') ? "selected": "" ?>>PBO
+                                        </option>
+                                        <option value="BD" <?php echo ($mpl == 'BD') ? "selected": "" ?>>BD
+                                        </option>
+                                        <option value="PPL" <?php echo ($mpl == 'PPL') ? "selected": "" ?>>PPL
+                                        </option>
                                     </select>
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Domisili</span>
-                                    <input type="text" value="<?=$data['domisili'];?>" name="domisili" required class="form-control" placeholder="Domisili" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" value="<?=$data['domisili'];?>" name="domisili" required
+                                        class="form-control" placeholder="Domisili" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Usia</span>
-                                    <input type="number" value="<?=$data['umur'];?>" name="umur" required class="form-control" placeholder="Usia" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" value="<?=$data['umur'];?>" name="umur" required
+                                        class="form-control" placeholder="Usia" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
 
                                 <div class="input-group mb-5">
                                     <select class="form-select" name="jk" required aria-label="Default select example">
-                                                <?php $jk = $data['jk']; ?>
-                                                <option value="Pria"
-                                                    <?php echo ($jk == 'Pria') ? "selected": "" ?>>Pria
-                                                </option>
-                                                <option value="Wanita"
-                                                    <?php echo ($jk == 'Wanita') ? "selected": "" ?>>Wanita
-                                                </option>
+                                        <?php $jk = $data['jk']; ?>
+                                        <option value="Pria" <?php echo ($jk == 'Pria') ? "selected": "" ?>>Pria
+                                        </option>
+                                        <option value="Wanita" <?php echo ($jk == 'Wanita') ? "selected": "" ?>>Wanita
+                                        </option>
                                     </select>
                                 </div>
 

@@ -16,7 +16,7 @@ if($_SESSION['role'] != "guru"){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Table - Brand</title>
+    <title>Data Siswa dan Nilai RPL</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="../https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -174,15 +174,19 @@ if($_SESSION['role'] != "guru"){
                                             <td style="text-align: center;"><?php echo $data['ppl'] ?></td>
                                             <td style="text-align: center;"><?php echo $data['kelas'] ?></td>
                                             <td style="text-align: center;">
-                                                <a href="editSiswaNilai_guru.php?id='<?php echo $data['id']?>'"
-                                                    class="btn btn-warning" type="button"
-                                                    style="width: 25px;height: 25px;margin: 0px;padding: 0px;"><i
-                                                        class="fas fa-edit"></i>
-                                                </a><a
-                                                    href="../config/hapusSiswaNilai_guru.php?id='<?php echo $data['id']?>'"
-                                                    class="btn btn-danger" type="button"
-                                                    style="width: 25px;height: 25px;margin: 0px;padding: 0px;"><i
-                                                        class="far fa-trash-alt"></i></a>
+                                                <a href="editSiswaNilai_guru.php?id='<?php echo $data['id']?>'">
+                                                    <i
+                                                        class="fas me-1 text-white fa-edit btn btn-warning btn-sm fs-6 fw-bold"></i>
+                                                </a>
+                                                <a
+                                                    href="../config/hapusSiswaNilai_guru.php?id='<?php echo $data['id']?>'">
+                                                    <i
+                                                        class="fas ms-1 me-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
+                                                </a>
+                                                <a href="view_nilai_siswa.php?id='<?= $data['id'];?>'">
+                                                    <i
+                                                        class="fas fa-eye btn btn-info btn-sm text-white ms-1 fs-6 fw-bold"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                         <?php

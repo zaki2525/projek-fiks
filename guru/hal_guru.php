@@ -16,7 +16,7 @@ if($_SESSION['role'] != "guru"){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - Brand</title>
+    <title>Dashboard Guru</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -111,33 +111,35 @@ if($_SESSION['role'] != "guru"){
                     <div class="container">
                         <div class="intro">
                             <h2 class="text-center">Artikel Terbaru</h2>
-                            <p class="text-center">Artikel berikut merupakan artikel terbaru dan terbagus serta terjamin
-                                kualitasnya!!!</p>
                         </div>
                         <div class="row articles">
                             <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid"
-                                        src="../assets/img/desk.jpg"></a>
-                                <h3 class="name">Artis AP ditangkap karna narkoba</h3>
-                                <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                    Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo
-                                    suscipit id.</p><a class="action" href="#"><i
+                                        src="..\assets\img\rancangan-ibu-kota-baru-2_169.png"></a>
+                                <h3 class="name">Jejak Desain Ibu Kota Baru: 8 Kali Revisi, Kompleks Istana 100 Hektare
+                                </h3>
+                                <p class="description">Desain Istana Negara di ibu kota baru dibuat oleh seniman patung
+                                    asal Bali, I Nyoman Nuarta. Dalam pradesain buatan Nyoman, tampak Istana Negara
+                                    lengkap dengan sejumlah taman, kolam, hingga area transportasi, dan dikelilingi
+                                    dengan patung burung garuda raksasa.</p><a class="action" href="#"><i
                                         class="fa fa-arrow-circle-right"></i></a>
                             </div>
                             <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid"
-                                        src="../assets/img/building.jpg"></a>
-                                <h3 class="name">Artis CA di tangkap karna kasus Prostitusi Online</h3>
-                                <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                    Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo
-                                    suscipit id.</p><a class="action" href="#"><i
+                                        src="../assets/img/pemrov-dki-hentikan-uji-coba-sekolah-tatap-muka_169.jpeg"></a>
+                                <h3 class="name">Daftar 39 Sekolah Jakarta Ditutup Sementara Akibat Kasus Covid</h3>
+                                <p class="description">Pemerintah Provinsi DKI Jakarta menutup sementara 39 sekolah yang
+                                    menggelar pembelajaran tatap muka (PTM) 100 persen. Penutupan itu dilakukan usai
+                                    temuan kasus virus corona (Covid-19) di sekolah.</p><a class="action" href="#"><i
                                         class="fa fa-arrow-circle-right"></i></a>
                             </div>
                             <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid"
-                                        src="../assets/img/loft.jpg"></a>
-                                <h3 class="name">Para pemuda sekarang banyak yang bucin</h3>
-                                <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                    Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo
-                                    suscipit id.</p><a class="action" href="#"><i
-                                        class="fa fa-arrow-circle-right"></i></a>
+                                        src="../assets/img/desain-terbaru-istana-kepresidenan-ibu-kota-negara_169.jpeg"></a>
+                                <h3 class="name">Nusantara Jadi Nama Ibu Kota Negara Pilihan Jokowi, Gugurkan 80 Nama
+                                </h3>
+                                <p class="description">Menteri Perencanaan Pembangunan Nasional (PPN)/ Kepala Badan
+                                    Perencanaan Pembangunan Nasional (Bappenas), Suharso Monoarfa, mengungkapkan
+                                    Presiden Joko Widodo (Jokowi) memilih Nusantara untuk menjadi ibu kota negara (IKN)
+                                    baru yang berlokasi di Kabupaten Penajam Paser Utara, Kalimantan Timur (Kaltim).
+                                </p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>

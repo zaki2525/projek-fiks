@@ -23,7 +23,7 @@ $data = $query->fetch_assoc();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Table - Brand</title>
+    <title>Edit Data Siswa dan Nilai Produktif RPL</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -119,56 +119,70 @@ $data = $query->fetch_assoc();
                     <h3 class="text-dark mb-4">Data Siswa</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold" style="text-align: center;">Edit Data Siswa dan Nilai Produktif RPL</p>
+                            <p class="text-primary m-0 fw-bold" style="text-align: center;">Edit Data Siswa dan Nilai
+                                Produktif RPL</p>
                         </div>
                         <div class="card-body">
                             <form action="../config/updateNilai_admin.php" method="POST">
                                 <input type="hidden" name="id" value="<?php echo $data['id']?>">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">NISN</span>
-                                    <input type="text" value="<?= $data['nisn']; ?>"name="nisn" required class="form-control" placeholder="NISN" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" value="<?= $data['nisn']; ?>" name="nisn" required
+                                        class="form-control" placeholder="NISN" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Nama</span>
-                                    <input type="text" value="<?= $data['nama']; ?>"name="nama" required class="form-control" placeholder="Nama" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" value="<?= $data['nama']; ?>" name="nama" required
+                                        class="form-control" placeholder="Nama" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">PWPB</span>
-                                    <input type="number" value="<?= $data['pwpb']; ?>"name="pwpb" required class="form-control" placeholder="PWPB" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" value="<?= $data['pwpb']; ?>" name="pwpb" required
+                                        class="form-control" placeholder="PWPB" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">PBO</span>
-                                    <input type="number" value="<?= $data['pbo']; ?>"name="pbo" required class="form-control" placeholder="PBO" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" value="<?= $data['pbo']; ?>" name="pbo" required
+                                        class="form-control" placeholder="PBO" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">BD</span>
-                                    <input type="number" value="<?= $data['bd']; ?>"name="bd" required class="form-control" placeholder="BD" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="number" value="<?= $data['bd']; ?>" name="bd" required
+                                        class="form-control" placeholder="BD" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">PPL</span>
-                                    <input type="text" value="<?= $data['ppl']; ?>"name="ppl" required class="form-control" placeholder="ppl" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" value="<?= $data['ppl']; ?>" name="ppl" required
+                                        class="form-control" placeholder="ppl" aria-label="Username"
+                                        aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <select class="form-select" name="kelas" required aria-label="Default select example">
-                                                <?php $kelas = $data['kelas']; ?>
-                                                <option value="10 RPL 1"
-                                                    <?php echo ($kelas == '10 RPL 1') ? "selected": "" ?>>10 RPL 1
-                                                </option>
-                                                <option value="10 RPL 2"
-                                                    <?php echo ($kelas == '10 RPL 2') ? "selected": "" ?>>10 RPL 2
-                                                </option>
-                                                <option value="11 RPL 1"
-                                                    <?php echo ($kelas == '11 RPL 1') ? "selected": "" ?>>11 RPL 1
-                                                </option>
-                                                <option value="11 RPL 2"
-                                                    <?php echo ($kelas == '11 RPL 2') ? "selected": "" ?>>11 RPL 2
-                                                </option>
-                                                <option value="12 RPL 1"
-                                                    <?php echo ($kelas == '12 RPL 1') ? "selected": "" ?>>12 RPL 1
-                                                </option>
-                                                <option value="12 RPL 2"
-                                                    <?php echo ($kelas == '12 RPL 2') ? "selected": "" ?>>12 RPL 2
-                                                </option>
+                                    <select class="form-select" name="kelas" required
+                                        aria-label="Default select example">
+                                        <?php $kelas = $data['kelas']; ?>
+                                        <option value="10 RPL 1" <?php echo ($kelas == '10 RPL 1') ? "selected": "" ?>>
+                                            10 RPL 1
+                                        </option>
+                                        <option value="10 RPL 2" <?php echo ($kelas == '10 RPL 2') ? "selected": "" ?>>
+                                            10 RPL 2
+                                        </option>
+                                        <option value="11 RPL 1" <?php echo ($kelas == '11 RPL 1') ? "selected": "" ?>>
+                                            11 RPL 1
+                                        </option>
+                                        <option value="11 RPL 2" <?php echo ($kelas == '11 RPL 2') ? "selected": "" ?>>
+                                            11 RPL 2
+                                        </option>
+                                        <option value="12 RPL 1" <?php echo ($kelas == '12 RPL 1') ? "selected": "" ?>>
+                                            12 RPL 1
+                                        </option>
+                                        <option value="12 RPL 2" <?php echo ($kelas == '12 RPL 2') ? "selected": "" ?>>
+                                            12 RPL 2
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="row mt-3">
