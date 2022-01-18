@@ -185,7 +185,7 @@ if($_SESSION['role'] != "admin"){
                                                     href="../config/hapusSiswaNilai_admin.php?id='<?php echo $data['id']?>'">
                                                     <i class="fas ms-1 me-1 fa-trash btn btn-danger btn-sm fs-6 fw-bold"></i>
                                                 </a>
-                                                <a href="#">
+                                                <a href="view_nilai_siswa.php?id='<?= $data['id'];?>'">
                                                     <i class="fas fa-eye btn btn-info btn-sm text-white ms-1 fs-6 fw-bold"></i>
                                                 </a>
                                             </td>
